@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<%= link_to 'New Movie', new_movie_path, :class=>"btn btn-info" %>
+</br>
+<h1>Listing Movies</h1>
+
+<div class="movie">
+<div class="container">
+    
+<!--<div class="row">
+    <div class="col-lg-1">Title</div>
+      <div class="col-lg-1">Category</div>
+      <div class="col-lg-1">Release date</div>
+    <div class="col-lg-1">Review</div>
+      <div class="row"><div class="col-lg-1">Name</div>
+</div>-->
+
+ 
+    <% @movies.each do |movie| %>
+    <div class="row">
+        <dl class="dl-horizontal"> 
+            <dt>Title:</dt>
+            
+        <dd><%= movie.title %></dd>
+     
+        <dt>Category:</dt>
+        <dd><%= movie.category %> <dd>
+        
+        <dt>Release date:</dt>
+         <dd><%= movie.release_date %> <dd>
+        
+        <dt>Name</dt>
+        <dd><%= movie.name %> <dd>
+            
+        <dt>Review:</dt>
+        <dd><%= movie.review %> <dd>
+        </dl>
+       
+        <div class="col-lg-1"><%= link_to 'Destroy', movie, method: :delete, data: { confirm: 'Are you sure?' }, :class=>"btn btn-primary btn-sm" %></div>
+        <div class="col-lg-1"><%= link_to 'Show', movie, :class=>"btn btn-primary btn-sm" %></div> 
+        <div class="col-lg-1"><%= link_to 'Edit', edit_movie_path(movie), :class=>"btn btn-primary btn-sm" %></div>
+    </div>
+    <% end %>
+
+
+
+</div>
+<br>
+
+
+</div>

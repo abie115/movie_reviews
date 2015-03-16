@@ -1,0 +1,24 @@
+@import "bootstrap";
+
+.field_with_errors { @extend .has-error; }
+.alert-notice { @extend .alert-info; }
+.alert-alert { @extend .alert-danger; }
+
+.box{
+    margin-top:100px;
+}
+.movie .container .row{
+    background-color:floralwhite;
+padding:10px;
+    margin:10px;
+}
+.movie .container .row .col-lg-1{
+    float:right;
+
+}
+.movie .container .row .col-lg-1 .btn{
+color:white;
+width:80px;
+text-align: center;
+    float:right;
+}

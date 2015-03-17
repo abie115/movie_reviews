@@ -1,8 +1,16 @@
 <p id="notice"><%= notice %></p>
+<div class="main">
+<h1>Listing Movies</h1>
 
 <%= link_to 'New Movie', new_movie_path, :class=>"btn btn-info" %>
-</br>
-<h1>Listing Movies</h1>
+
+</div>
+
+
+
+
+
+
 
 <div class="movie">
 <div class="container">
@@ -15,7 +23,6 @@
       <div class="row"><div class="col-lg-1">Name</div>
 </div>-->
 
- 
     <% @movies.each do |movie| %>
     <div class="row">
         <dl class="dl-horizontal"> 

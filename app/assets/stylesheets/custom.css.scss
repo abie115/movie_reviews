@@ -6,6 +6,7 @@
 
 .box{
     margin-top:100px;
+    
 }
 .navbar{
 //background-color:lightcyan;
@@ -30,4 +31,8 @@ float:right;
 
 .container .btn {
 color:white;
+}
+
+.box .container .row  .main{ 
+    text-align:center;
 }

@@ -8,19 +8,29 @@
 </head>
 <body>
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-        <!-- bez fixed top nie jest statyczne, jak wrocic do poprzedniego to najlepiej jeszcze box usunac-->
+        <!-- bez fixed top nie jest statyczne, jak wrocic do poprzedniego to najlepiej jeszcze bix-->
     <div class="container">
-       <h1> <%= link_to 'Main Page', '/movies', :class =>"navbar-brand" %></h1>
+       <h1> <%= link_to 'Main Page', '/movies', :class =>"navbar-brand " %></h1>
    <!-- <h1>Listing Movies</h1>-->
+<%= form_tag movies_path, :method => 'get', :class =>"navbar-form navbar-right" do %>
+<div class="form-group">
+<%= (text_field_tag :search, params[:search], :class =>"form-control", :placeholder =>"Search") %>
+</div>
+<%= submit_tag "Search",:category => nil, class:'btn btn-success' %>
+<% end %>
     </div>
 </nav>
+    
+    
+
 
 <div class="box">
 <div class="container">
     <div class="row">
-        <div class="col-xs-9">
+    
+
 <%= yield %>
-        </div>
+
     </div>
 </div>
     </div>

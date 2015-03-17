@@ -18,15 +18,12 @@
     padding:10px;
     margin:10px;
 }
-.movie .container .row .col-lg-1{
-    float:right;
 
-}
-.movie .container .row .col-lg-1 .btn{
+.movie .container .row .btn{
 color:white;
-width:80px;
+width:60px;
 text-align: center;
-float:right;
+
 }
 
 .container .btn {
@@ -36,3 +33,6 @@ color:white;
 .box .container .row  .main{ 
     text-align:center;
 }
+
+.box .container .row{
+padding:10px;}

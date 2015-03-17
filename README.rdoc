@@ -1,28 +1,20 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Projekt na zaliczenie Architektura Serwisów Komputerowych
 
-Things you may want to cover:
+Dodatkowe gemy:
+gem 'sass-rails', '~> 5.0'
+gem 'bootstrap-sass', '~> 3.2.0'
+gem 'will_paginate',           '3.0.7'
+gem 'bootstrap-will_paginate', '0.0.10'
 
-* Ruby version
+Validacja->Nie można dodawac recenzji filmów, które mają swoją premiere w przyszłosci
+Min. długość username, title, category
+responsywnosc -> boostrap
+wyszukiwarka po kategorii
+paginacja
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+TODO
+logowanie
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.

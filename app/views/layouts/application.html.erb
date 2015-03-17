@@ -12,12 +12,14 @@
     <div class="container">
        <h1> <%= link_to 'Main Page', '/movies', :class =>"navbar-brand " %></h1>
    <!-- <h1>Listing Movies</h1>-->
-<%= form_tag movies_path, :method => 'get', :class =>"navbar-form navbar-right" do %>
-<div class="form-group">
-<%= (text_field_tag :search, params[:search], :class =>"form-control", :placeholder =>"Search") %>
-</div>
+<%= form_tag movies_path, :method => 'get', :class =>"navbar-form navbar-left", :role => "search" do %>
+<div class="input-group">
+<%= (text_field_tag :search, params[:search], :class =>"form-control", :placeholder =>"Category") %>
+<div class="input-group-btn">
 <%= submit_tag "Search",:category => nil, class:'btn btn-success' %>
 <% end %>
+    </div></div>
+        
     </div>
 </nav>
     

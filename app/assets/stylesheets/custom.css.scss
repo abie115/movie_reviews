@@ -4,14 +4,26 @@
 .alert-notice { @extend .alert-info; }
 .alert-alert { @extend .alert-danger; }
 
-.box{
-    margin-top:100px;
-    
+body{
+margin-top:70px;
 }
+
 .navbar{
-//background-color:lightcyan;
+background-color:darkslategray;
+border: 1px solid darkslategray;
+
 }
-.movie .container .row{
+/*background-color:darkcyan;*/
+
+ul.nav.navbar-nav li a{
+color:white;
+}
+
+ul.nav.navbar-nav li a:hover{
+background-color:darkcyan;
+}
+
+.list{
     background-color:beige;
     border: 2px solid;
     border-color:aquamarine;
@@ -19,20 +31,9 @@
     margin:10px;
 }
 
-.movie .container .row .btn{
-color:white;
-//width:70px;
-text-align: center;
-
-}
-
 .container .btn {
 color:white;
 }
 
-.box .container .row  .main{ 
-    text-align:center;
-}
 
-.box .container .row{
-padding:10px;}
+

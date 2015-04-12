@@ -1,11 +1,12 @@
 class MoviesController < ApplicationController
   before_action :set_movie, only: [:show, :edit, :update, :destroy]
+     before_filter :require_login, :only => [:new, :edit]
 
   # GET /movies
   # GET /movies.json
   def index
       @movies=Movie.all
-      @movies = Movie.paginate(page: params[:page], :per_page =>5).search(params[:search])
+      @movies = Movie.paginate(page: params[:page], :per_page =>5).order('created_at DESC').search(params[:search])
       respond_to do |format|
           format.html
           format.js
@@ -77,4 +78,5 @@ class MoviesController < ApplicationController
     def movie_params
       params.require(:movie).permit(:title, :category, :release_date, :review, :name)
     end
+   
 end

@@ -1,42 +1,33 @@
-<p id="notice"><%= notice %></p>
 <div class="main">
-<h1>Movies Review</h1>
+<h1>Hello </h1>
 
-<%= link_to 'Add Movie Review', new_movie_path, :class=>"btn btn-info" %>
-
+<!--<%= link_to 'Add Movie Review', new_movie_path, :class=>"btn btn-info" %>
+-->
 </div>
-
-    
-<!--<div class="row">
-    <div class="col-lg-1">Title</div>
-      <div class="col-lg-1">Category</div>
-      <div class="col-lg-1">Release date</div>
-    <div class="col-lg-1">Review</div>
-      <div class="row"><div class="col-lg-1">Name</div>
-</div>-->
     <% @movies.each do |movie| %>
-    <div class="list">
-        <dl class="dl-horizontal"> 
-            <dt>Title:</dt>
-            
-        <dd><%= movie.title %></dd>
+        <div class="list">
+            <dl class="dl-horizontal"> 
+                <dt>Title:</dt>            
+                <dd><%= movie.title %></dd>
      
-        <dt>Category:</dt>
-        <dd><%= movie.category %> <dd>
+                <dt>Category:</dt>
+                <dd><%= movie.category %> <dd>
         
-        <dt>Release date:</dt>
-         <dd><%= movie.release_date %> <dd>
+                <dt>Release date:</dt>
+                <dd><%= movie.release_date %> <dd>
         
-        <dt>Name</dt>
-        <dd><%= movie.name %> <dd>
+                <dt>Name:</dt>
+                <dd><%= movie.name %> <dd>
             
-        <dt>Review:</dt>
-        <dd><%= movie.review.length > 120 ?movie.review[0,120]+"...":movie.review %>  <dd>
-        </dl>
+                <dt>Review:</dt>
+                <dd><%= movie.review.length > 120 ?movie.review[0,120]+"...":movie.review %><dd>
+            </dl>
             
         <%= link_to 'Show', movie, :class=>"btn btn-primary btn-sm" %> 
+    <% if logged_in? %>
         <%= link_to 'Edit', edit_movie_path(movie), :class=>"btn btn-primary btn-sm" %>
          <%= link_to 'Destroy', movie, method: :delete, data: { confirm: 'Are you sure?' }, :class=>"btn btn-danger btn-sm" %>
+        <% end %>
     </div>
     <% end %>
     <%= will_paginate @movies %>

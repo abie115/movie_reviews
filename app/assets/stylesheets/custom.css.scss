@@ -5,40 +5,40 @@
 .alert-alert { @extend .alert-danger; }
 
 body{
-margin-top:70px;
+    margin-top:70px;
+    margin-bottom:20px;
 }
 
 .navbar{
-background-color:darkslategray;
-border: 1px solid darkslategray;
-
+    background-color:darkslategray;
+    border: 1px solid darkslategray;
 }
-/*background-color:darkcyan;*/
 
 ul.nav.navbar-nav li a{
-color:white;
+    color:white;
 }
 
 ul.nav.navbar-nav li a:hover{
-background-color:darkcyan;
+    background-color:darkcyan;
 }
 
 .list{
-    background-color:beige;
+    background-color:#D6F5D6;
     border: 2px solid;
-    border-color:aquamarine;
+    border-color:#9BB4B4;
     padding:10px;
     margin:10px;
+}
+
+.list:hover{
+    background-color:#9BB4B4;
+
 }
 
 .container .btn {
 color:white;
 }
 
-/*.form-control{
-    width:200px;
-    height:30px;
-}*/
 select.form-control{
     width:80px;
     height:30px;
@@ -55,10 +55,15 @@ select#movie_release_date_2i.form-control{
     height:30px;
     display:inline;
 }
-/*
-#movie_review.form-control{
-width:350px;
-    height:150px;
-}*/
 
+.navbar-brand{
+padding:5px;
+}
+
+.navbar-brand:hover{
+padding:7px;
+}
+.navbar-brand:active{
+opacity: 0.7;
+}
 

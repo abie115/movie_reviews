@@ -1,37 +1,41 @@
 <%= form_for(@movie) do |f| %>
-  <% if @movie.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@movie.errors.count, "error") %> prohibited this movie from being saved:</h2>
+<% if @movie.errors.any? %>
+  <div  class="alert alert-danger" role="alert">
+         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>    
+      The form contains <%= pluralize(@movie.errors.count, "error") %>.
+    <ul>
+    <% @movie.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
 
-      <ul>
-      <% @movie.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title, :class => "form-control",:rows=>10%>
-  </div>
-  <div class="field">
-    <%= f.label :category %><br>
-    <%= f.text_field :category, :class => "form-control" %>
-  </div>
-  <div class="field">
-    <%= f.label :release_date %><br>
-    <%= f.date_select :release_date, { :start_year => 1920, :end_year=>2020},:class=>"form-control"%>
-  </div>
-  <div class="field">
-    <%= f.label :review %><br>
-    <%= f.text_area :review , :class => "form-control"%>
-  </div>
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name, :class => "form-control" %>
-  </div>
-  <div class="actions">
-    <%= f.submit 'Submit', :class =>"btn btn-warning btn-sm"%>
-  </div>
 <% end %>
+<div class="row">
+  <div class="col-md-4 ">
+      <div class="field">
+          <%= f.label :title %>
+          <%= f.text_field :title, :class => "form-control",:rows=>10%>
+      </div>
+      <div class="field">
+          <%= f.label :category %>
+          <%= f.text_field :category, :class => "form-control" %>
+      </div>
+      <div class="field">
+        <%= f.label :release_date %>
+        <%= f.date_select :release_date, { :start_year => 1920, :end_year=>2020},:class=>"form-control"%>
+     </div>
+    <div class="field">
+        <%= f.label :review %>
+        <%= f.text_area :review , :class => "form-control"%>
+    </div>
+    <div class="field">
+        <%= f.label :name %>
+        <%= f.text_field :name, :class => "form-control" %>
+      </div>
+    <div class="actions">
+        <%= f.submit 'Submit', :class =>"btn btn-warning btn-sm"%>
+    </div>
+<% end %>
+  </div>
+</div>

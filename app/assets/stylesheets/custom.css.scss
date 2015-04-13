@@ -5,7 +5,6 @@
 .alert-alert { @extend .alert-danger; }
 
 body{
-    margin-top:70px;
     margin-bottom:20px;
 }
 
@@ -14,6 +13,7 @@ body{
     border: 1px solid darkslategray;
     font-weight: bold;
    font-size: 14px;
+    margin-bottom:20px;
 }
 
 ul.nav.navbar-nav li a{

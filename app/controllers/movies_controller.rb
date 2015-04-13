@@ -6,7 +6,7 @@ class MoviesController < ApplicationController
   # GET /movies.json
   def index
       @movies=Movie.all
-      @movies = Movie.paginate(page: params[:page], :per_page =>5).order('created_at DESC').search(params[:search])
+      @movies = Movie.paginate(page: params[:page], :per_page =>4).order('created_at DESC').search(params[:search])
       respond_to do |format|
           format.html
           format.js

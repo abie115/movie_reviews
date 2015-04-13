@@ -24,7 +24,7 @@ git push heroku master
 heroku run rake db:migrate
 heroku open
 ```
-Dodanie przykładowych rekordów z seed.rb:
+Dodanie przykładowych rekordów z seeds.rb:
 ```
 heroku run rake db:seed
 ```

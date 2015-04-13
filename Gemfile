@@ -18,8 +18,7 @@ gem 'jquery-rails', '~> 4.0.3'
 gem 'turbolinks', '~> 2.5.3'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.2.13'
-gem 'pygments.rb', '0.6.3'
-gem 'redcarpet', '3.2.2'
+
 group :development, :test do
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '~> 1.3.10'

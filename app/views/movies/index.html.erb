@@ -1,8 +1,5 @@
 <div class="main">
-<h1>Hello </h1>
 
-<!--<%= link_to 'Add Movie Review', new_movie_path, :class=>"btn btn-info" %>
--->
 </div>
     <% @movies.each do |movie| %>
         <div class="list">
@@ -24,15 +21,13 @@
             </dl>
             
         <%= link_to 'Show', movie, :class=>"btn btn-primary btn-sm" %> 
-    <% if logged_in? %>
-        <%= link_to 'Edit', edit_movie_path(movie), :class=>"btn btn-primary btn-sm" %>
-         <%= link_to 'Destroy', movie, method: :delete, data: { confirm: 'Are you sure?' }, :class=>"btn btn-danger btn-sm" %>
+        <% if logged_in? %>
+          <%= link_to 'Edit', edit_movie_path(movie), :class=>"btn btn-primary btn-sm" %>
+          <%= link_to 'Destroy', movie, method: :delete, data: { confirm: 'Are you sure?' }, :class=>"btn btn-danger btn-sm" %>
         <% end %>
     </div>
-    <% end %>
-    <%= will_paginate @movies %>
-
-<br>
+<% end %>
+<%= will_paginate @movies %>
 
 
 

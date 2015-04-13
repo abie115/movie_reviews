@@ -10,11 +10,8 @@ gem 'will_paginate',           '3.0.7'<br>
 gem 'bootstrap-will_paginate', '0.0.10'<br>
 <br><br>
 *Deployment instruction:
-bundle install --without production
-rake db:migrate
-rake db:seed
 
-*Dodatkowe uwagii:
+Dodatkowe uwagii:
 Nie można dodawać recenzji filmów, które mają swoją premiere w przyszłosci<br>
 Aby móc dodawac, edytować recenzje filmów należy się zalogować<br>
 
